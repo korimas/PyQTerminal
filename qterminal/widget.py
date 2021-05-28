@@ -52,7 +52,7 @@ class QTerminalWidget(QWidget):
         'white': QColor(0xff, 0xff, 0xff)
     }
 
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, host=None, user=None, password):
         super(QTerminalWidget, self).__init__(parent)
         self.setCursor(Qt.IBeamCursor)
         self.setFocusPolicy(Qt.StrongFocus)
@@ -78,7 +78,7 @@ class QTerminalWidget(QWidget):
         self.default_brush = QBrush(self.colors['black'])
         self.default_pen = QPen(self.colors['white'])
 
-        self.backend = SSHBackend(self._columns, self._rows, '10.182.51.82', 'root', 'password')
+        self.backend = SSHBackend(self._columns, self._rows, host, user, password)
         self.pixmap = QPixmap(self.width(), self.height())
 
         # scroll
