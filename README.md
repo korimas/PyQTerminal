@@ -6,4 +6,4 @@ A terminal emulator written in pyqt。
 * pyte      --  VT100 support
 
 # Screenshot
-![1](./img/sp.png)
+![1](./sp.png)
