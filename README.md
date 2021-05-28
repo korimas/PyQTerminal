@@ -10,7 +10,7 @@ A terminal emulator written in pyqt。
 if __name__ == "__main__":
     try:
         app = QApplication(sys.argv)
-        win = QTerminal()
+        win = QTerminal(host='10.11.3.13', user='root', password='pslkien@3d')
         win.show()
         sys.exit(app.exec_())
     except:
