@@ -78,7 +78,7 @@ class QTerminalWidget(QWidget):
         self.default_brush = QBrush(self.colors['black'])
         self.default_pen = QPen(self.colors['white'])
 
-        self.backend = SSHBackend(self._columns, self._rows, '10。182。51。82', 'root', 'hillstone')
+        self.backend = SSHBackend(self._columns, self._rows, '10.182.51.82', 'root', 'password')
         self.pixmap = QPixmap(self.width(), self.height())
 
         # scroll
